@@ -67,6 +67,7 @@ body {
 .marketing {
   padding-right: 15px;
   padding-left: 15px;
+  text-align: center;
 }
 
 /* Center align the text within the three columns below the carousel */
@@ -81,7 +82,12 @@ body {
   margin-right: 10px;
   margin-left: 10px;
 }
-
+.marketing .col-lg-2 p {
+  font-size: .8em;
+}
+.marketing .col-lg-2 h2 {
+  font-size: 1.4em;
+}
 
 /* Featurettes
 ------------------------- */
