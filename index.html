@@ -8,6 +8,26 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery/1.11.0/jquery.min.js" ></script>
+    <script type="text/javascript" language="javascript">
+
+      $(document).ready(function(){
+        $(document).on("mouseover", ".linkDiv", function(){
+          $("img", this).css("border", "3px solid green");
+        });
+        $(document).on("mouseout", ".linkDiv", function(){
+          $("img", this).css("border", "none");
+        });
+        $(document).on("click", ".linkDiv", function(){
+          console.log($("a", this).attr("href"));
+          window.location.href= $("a", this).attr("href");
+        });
+        $(".linkDiv a").hide();
+        
+      });
+    </script>
 
     <title>The MediaLab at the Metropolitan Museum of Art - Beta</title>
 
@@ -83,7 +103,7 @@
       </ol>
       <div class="carousel-inner">
         <div class="item active">
-          <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="Our Mission">
+          <img src="images/AmericanMask.jpg" alt="Our Mission">
           <div class="container">
             <div class="carousel-caption">
               <h1>Our Mission</h1>
@@ -92,7 +112,7 @@
           </div>
         </div>
         <div class="item">
-          <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Fourth slide" alt="Unicorn">
+          <img src="images/medialabConversation.jpg" width="960" alt="Unicorn">
           <div class="container">
             <div class="carousel-caption">
               <h1>uni·corn </h1>
@@ -101,7 +121,7 @@
           </div>
         </div>
         <div class="item">
-          <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Conversation">
+          <img src="images/ericKjellgren.jpg" alt="Conversation">
           <div class="container">
             <div class="carousel-caption">
               <h1>Creative Technology in Conversation with Museum Expertise</h1>
@@ -110,7 +130,7 @@
           </div>
         </div>
         <div class="item">
-          <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="Creative Reuse">
+          <img src="images/ledaMarsyas.jpg" alt="Creative Reuse">
           <div class="container">
             <div class="carousel-caption">
               <h1>Museum Content for Creative Reuse</h1>
@@ -126,137 +146,65 @@
 
 
 
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="container marketing">
-
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-2">
-          <img class="img-circle" data-src="holder.js/120x120" alt="Generic placeholder image">
-          <h2>Don Undeen</h2>
-          <p>Senior Manager of MediaLab</p>
-          <p>@donundeen</p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-2">
-          <img class="img-circle" data-src="holder.js/120x120" alt="Generic placeholder image">
-          <h2>Jonathan Dahan</h2>
-          <p>Media Technology Developer</p>
-          <p>@jedahan</p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-2">
-          <img class="img-circle" data-src="holder.js/120x120" alt="Generic placeholder image">
-          <h2>Michael Thompson</h2>
-          <p>Unicorn</p>
-          <p></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-2">
-          <img class="img-circle" data-src="holder.js/120x120" alt="Generic placeholder image">
-          <h2>Ellen Spindler</h2>
-          <p>Unicorn</p>
-          <p></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-2">
-          <img class="img-circle" data-src="holder.js/120x120" alt="Generic placeholder image">
-          <h2>Clement Valla</h2>
-          <p>Unicorn</p>
-          <p></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-2">
-          <img class="img-circle" data-src="holder.js/120x120" alt="Generic placeholder image">
-          <h2>Sean McCracken</h2>
-          <p>Unicorn</p>
-          <p></p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-
-      <div class="row">
-        <div class="col-lg-2">
-          <img class="img-circle" data-src="holder.js/120x120" alt="Generic placeholder image">
-          <h2>Sarah Wever</h2>
-          <p>Unicorn</p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-2">
-          <img class="img-circle" data-src="holder.js/120x120" alt="Generic placeholder image">
-          <h2>Decho Pituchearon</h2>
-          <p>Unicorn</p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-2">
-          <img class="img-circle" data-src="holder.js/120x120" alt="Generic placeholder image">
-          <h2>Seungkyun Lee</h2>
-          <p>Unicorn</p>
-          <p></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-2">
-          <img class="img-circle" data-src="holder.js/120x120" alt="Generic placeholder image">
-          <h2>Apon Panuwich</h2>
-          <p>Unicorn</p>
-          <p></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-2">
-          <img class="img-circle" data-src="holder.js/120x120" alt="Generic placeholder image">
-          <h2>Ben Kauffman</h2>
-          <p>Unicorn</p>
-          <p></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-2">
-          <img class="img-circle" data-src="holder.js/120x120" alt="Generic placeholder image">
-          <h2>DD</h2>
-          <p>Unicorn</p>
-          <p></p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
+    
+<center><h1>MediaLab Online Projects</h2></center>
 
 
-
-
-
-    <div class="container">
+    <div class="container links">
       <!-- Example row of columns -->
       <div class="row">
-        <div class="col-md-4">
-          <img class="img-circle" data-src="holder.js/280x140" alt="Generic placeholder image">
-
+        <div class="col-md-4 linkDiv">
+          <img class="img-circle" src="images/scrapi.jpg" width="280" alt="SCRAPI">
           <h2>SCRAPI</h2>
           <p>Machine Access to Website Data</p>
           <p><a class="btn btn-default" href="http://scrapi.org" role="button">Check it!</a></p>
         </div>
-        <div class="col-md-4">
-          <img class="img-circle" data-src="holder.js/280x140" alt="Generic placeholder image">
+        <div class="col-md-4  linkDiv">
+          <img class="img-circle" src="images/smiles.jpg" width="280" alt="Smiles">
           <h2>Smiles</h2>
           <p>Inspired by Kathy Galitz's 'Smile' </p>
+          <p><a class="btn btn-default" href="http://github.com/metmuseum-medialab/objectcrowdsourcer" role="button">Check it!</a></p>
        </div>
-        <div class="col-md-4">
-          <img class="img-circle" data-src="holder.js/280x140" alt="Generic placeholder image">
+        <div class="col-md-4  linkDiv">
+          <img class="img-circle" src="images/sameartistmemory.jpg" width="280" alt="Oval Screenshot of Same Artist Memory Game">
           <h2>Same Artist Memory</h2>
           <p>Simple Memory Game, but match the artist!</p>
-          <p><a class="btn btn-default" href="#" role="button">Play!</a></p>
+          <p><a class="btn btn-default" href="/sameartistmemory/" role="button">Play!</a></p>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-md-4">
-          <img class="img-circle" data-src="holder.js/280x140" alt="Generic placeholder image">
-
-          <h2>Digital Copyist : Super Mario Clouds</h2>
-          <p>Machine Access to Website Data</p>
-          <p><a class="btn btn-default" href="http://scrapi.org" role="button">Blog Post</a></p>
+        <div class="col-md-4 linkDiv">
+          <img class="img-circle" src="images/data_integrator.png" width="280" alt="Data Integrator" />
+          <h2>Data Integrator</h2>
+          <p>Widget-based tool for integrating object information and functionality</p>
+          <p><a class="btn btn-default" href="/integrator/index.html" role="button">Check it!</a></p>
         </div>
-        <div class="col-md-4">
-          <img class="img-circle" data-src="holder.js/280x140" alt="Generic placeholder image">
-          <h2>Hackgrah</h2>
+        <div class="col-md-4 linkDiv">
+          <img class="img-circle"  src="images/hackgraph.jpg" width="280" alt="Hackgraph">
+          <h2>Hackgraph</h2>
           <p>A Graph of Hackpad Links </p>
           <p><a class="btn btn-default" href="/hackgraph/" role="button">Check it!</a></p>
        </div>
-        <div class="col-md-4">
-          <img class="img-circle" data-src="holder.js/280x140" alt="Generic placeholder image">
+        <div class="col-md-4 linkDiv">
+          <img class="img-circle" src="images/pathfinder.jpg" width="280" alt="Pathfinder">
           <h2>Pathfinder</h2>
           <p>Beta Pathfinding app for the Met.</p>
-          <p><a class="btn btn-default" href="#" role="button">Check it!</a></p>
+          <p><a class="btn btn-default" href="/pathfinder/" role="button">Check it!</a></p>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-md-4 linkDiv">
+          <img class="img-circle" src="images/cascader.png" width="280" alt="Image Cascade Processor" />
+          <h2>Computer Vision Service</h2>
+          <p>Give it an image and it will process it through various openCV cascade files.</p>
+          <p><a class="btn btn-default" href="/cascader/index.html" role="button">Check it!</a></p>
+        </div>
+      </div>
+
 
       <hr>
 
